@@ -6,6 +6,11 @@ var arr = [10,20,30];
 
   //Code Here
 
+function first (arr) {
+  return arr[0];
+}
+
+console.log(first(arr));
 
 //Next problem
 
@@ -14,9 +19,13 @@ var arr = [10,20,30];
 var arr = [40,50,60];
 //Create a function named 'last' that is given 'arr' as the argument and returns the last item in the given array.
 
-
   //Code Here
 
+  function last (arr) {
+    return arr.pop();
+  }
+
+  console.log(last(arr));
 
 //Next Problem
 
@@ -26,6 +35,13 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 
   //Code Here
 
+function looper (family) {
+  for (var i in family) {
+    alert(family[i]);
+  }
+}
+
+looper(family);
 
 //Next problem
 
@@ -36,6 +52,14 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 
   //Code Here
 
+function reversedLooper (letters) {
+  var reversed = letters.reverse();
+  for (var i in reversed) {
+    alert(reversed[i]);
+  }
+}
+
+reversedLooper(letters);
 
 //Next Problem
 
@@ -45,6 +69,18 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
   //Code Here
 
+function evenFinder (nums) {
+  var results = nums;
+  for (var i=results.length -1; i >= 0; i--) {
+    if (results[i]%2!=0) {
+      results.splice(i , 1);
+      // results +=[i];
+    }
+  }
+  return results;
+}
+
+console.log(evenFinder(nums));
 
 //Next problem
 
@@ -57,6 +93,21 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
   //Code Here
 
+function divider (numbersArray) {
+  var evens = [];
+  var odds = [];
+    for (var i=0; i < numbersArray.length; i++) {
+      if (numbersArray[i]%2===0) {
+        evens.push(numbersArray[i]);
+      } else {
+        odds.push(numbersArray[i]);
+      }
+    }
+    // return evens.concat(odds);
+  return [evens, odds];
+}
+
+console.log(divider(numbersArray));
 
 //Next Problem
 
